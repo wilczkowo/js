@@ -6,45 +6,21 @@
 </head>
 <body>
 
-<button id="button" onclick="getUserData('ola')">funkcja</button>
-<p id="resultParagraph"></p>
+<ul id="list">
+	<li class="item">Item 1</li>
+	<li class="item">Item 2</li>
+	<li class="item">Item 3</li>
+	<li class="item">Item 4</li>
+	<li class="item">Item 5</li>
+</ul>
+
+<button id="submit">Submit</button>
+
+<h2 class="hello">Hello</h2>
+<h2>Header 2</h2>
 
 
-<script>
-
-
-    function getEmail(user) {
-        return new Promise((resolve, reject) => {
-            if (!user) {
-                reject(new Error('no user'));
-                return;
-            }
-            resolve({email: 'ola@fromDB.com'});
-        })
-    }
-
-    function getAddress(email) {
-        return new Promise((resolve, reject) => {
-            if (!email) {
-                reject(new Error('no user'));
-                return;
-            }
-            resolve({address: 'wilczkowoFromBD'});
-        })
-    }
-
-    async function getUserData(user) {
-        const resultParagraph = document.getElementById('resultParagraph')
-        email = await getEmail(user).then(user => { return user.email}).catch(error => console.log(error.message));
-        address = await getAddress(email).then(user => {return user.address}).catch(error => console.log(error.message));
-        resultParagraph.innerText= 'email: '+email+' address: '+address;
-        console.log('button wcisniety');
-    }
-
-
-
-
-</script>
+<script src="./app.js"> </script>
 </body>
 </html>
 
