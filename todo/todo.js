@@ -3,6 +3,7 @@ const formInput = document.querySelector(".todo-input");
 const formButton = document.querySelector(".todo-button");
 const listContainer = document.querySelector(".todo-container");
 const list = document.querySelector(".todo-list");
+const root = document.querySelector(":root");
 
 // events
 
@@ -33,6 +34,9 @@ function addTodo(e) {
   list.appendChild(liWrapper);
 
 }
+const ala = getComputedStyle(root).getPropertyValue('--dark');
+root.style.setProperty('--gradientA','brown');
+console.log(ala);
 
 
 
