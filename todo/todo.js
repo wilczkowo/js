@@ -1,19 +1,33 @@
-const list = document.querySelector('#list');
-const listItem = document.createElement('li');
-listItem.className='item';
-listItem.innerText='Item 4';
-list.appendChild(listItem);
-list.style.color = 'green';
+// selectors
+const formInput = document.querySelector('.todo-input')
+const formButton = document.querySelector('.todo-button')
+const listContainer = document.querySelector('.todo-container')
+const list = document.querySelector('.todo-list')
 
-const button = document.querySelector('#submit');
-button.addEventListener('keypress',(e)=>{
-    console.log(e);
-})
+// events
 
+formButton.addEventListener('click', addTodo)
 
+// functions
 
+function addTodo(e) {
+  e.preventDefault()
+  console.log('ala')
+}
 
+function MyHereDoc(){
 
+        let mojString = 'ala ma kota'    
+        var reobj = new RegExp("/\\*"+here+"\\n[\\s\\S]*?\\n"+here+"\\*/", "m");
+        str = reobj.exec(MyHereDoc).toString();
+        str = str.replace(new RegExp("/\\*"+here+"\\n",'m'),'').toString();
+        return str.replace(new RegExp("\\n"+here+"\\*/",'m'),'').toString();
+    }
+    
 
-
-
+{/* <div class="todo">
+  <li>
+    <button></button>
+    <button></button>
+  </li>
+</div> */}
