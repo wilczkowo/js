@@ -72,6 +72,7 @@ form button:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.5s ease;
 }
 
 .liWrapper li {
@@ -106,5 +107,13 @@ form button:hover {
 
 
 .complete{
-    color: #81ff75;
+    color:blue;
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.fall{
+    transform: translateY(8rem) rotateZ(20deg);
+    opacity: 0;
+    
 }
