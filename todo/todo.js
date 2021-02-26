@@ -43,10 +43,22 @@ function addTodo(e) {
   formInput.value = "";
 }
 
+//remove  li
 const removeTodoItem = (e) => {
   let item = e.target.parentElement;
   item.classList.add("fall");
   item.addEventListener('transitionend',()=>item.remove());
 };
+
+// togle when done
 const toggleClassCompleteForItem = (e) =>
   e.target.parentElement.classList.toggle("complete");
+
+// select
+
+const todoSelect = document.querySelector('.todoSelect');
+todoSelect.addEventListener('change',filterTodoList);
+
+function filterTodoList(){
+    console.log(todoSelect.value);
+}
