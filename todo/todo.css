@@ -107,7 +107,7 @@ form button:hover {
   pointer-events: none;
 }
 
-.complete {
+.completed {
   color: blue;
   text-decoration: line-through;
   opacity: 0.5;
@@ -145,4 +145,15 @@ select {
   right: 0;
   padding: 1rem;
   pointer-events: none;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after{
+  color: tomato;
+  background: white;
+}
+
+.disappear{
+  display: none;
 }
