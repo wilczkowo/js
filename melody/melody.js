@@ -1,5 +1,6 @@
 class Melody {
     constructor() {
+        this.tempo = 150;
     }
 
     playSound(htmlElement) {
@@ -51,7 +52,7 @@ class Melody {
 
 
             if (button.innerText === 'Play') {
-                this.repeat(60);
+                this.repeat(this.tempo);
                 button.innerText = 'Stop';
             }
 
@@ -64,6 +65,9 @@ class Melody {
 
     getTempoFromSlider(tempo, event) {
         event.target.parentElement.querySelector("span").innerText = tempo;
+        this.tempo = tempo;
+        clearInterval(this.padInterval);
+        this.repeat(this.tempo);
     }
 
 }
