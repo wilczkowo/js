@@ -7,9 +7,9 @@
     <title>melodia</title>
 </head>
 <body>
-<div class="sequencer">
+<div class="sequencer" >
     <div class="kick-track">
-        <div class="controls">
+        <div class="controls" >
             <h1>Kick</h1>
             <button data-track="0" class="mute kick-volume">
                 <i class="fas fa-volume-mute"></i>
@@ -22,14 +22,14 @@
             </select>
         </div>
         <div class="kick">
-            <div class="pad kick-pad b0"></div>
-            <div class="pad kick-pad b1"></div>
-            <div class="pad kick-pad b2"></div>
-            <div class="pad kick-pad b3"></div>
-            <div class="pad kick-pad b4"></div>
-            <div class="pad kick-pad b5"></div>
-            <div class="pad kick-pad b6"></div>
-            <div class="pad kick-pad b7"></div>
+            <div class="pad kick-pad b0" onclick="melody.ActivePad(event)"></div>
+            <div class="pad kick-pad b1" onclick="melody.ActivePad(event)"></div>
+            <div class="pad kick-pad b2" onclick="melody.ActivePad(event)"></div>
+            <div class="pad kick-pad b3" onclick="melody.ActivePad(event)"></div>
+            <div class="pad kick-pad b4" onclick="melody.ActivePad(event)"></div>
+            <div class="pad kick-pad b5" onclick="melody.ActivePad(event)"></div>
+            <div class="pad kick-pad b6" onclick="melody.ActivePad(event)"></div>
+            <div class="pad kick-pad b7" onclick="melody.ActivePad(event)"></div>
         </div>
     </div>
     <div class="snare-track">
@@ -45,14 +45,14 @@
             </select>
         </div>
         <div class="snare">
-            <div class="pad snare-pad b0"></div>
-            <div class="pad snare-pad b1"></div>
-            <div class="pad snare-pad b2"></div>
-            <div class="pad snare-pad b3"></div>
-            <div class="pad snare-pad b4"></div>
-            <div class="pad snare-pad b5"></div>
-            <div class="pad snare-pad b6"></div>
-            <div class="pad snare-pad b7"></div>
+            <div class="pad snare-pad b0" onclick="melody.ActivePad(event)"></div>
+            <div class="pad snare-pad b1" onclick="melody.ActivePad(event)"></div>
+            <div class="pad snare-pad b2" onclick="melody.ActivePad(event)"></div>
+            <div class="pad snare-pad b3" onclick="melody.ActivePad(event)"></div>
+            <div class="pad snare-pad b4" onclick="melody.ActivePad(event)"></div>
+            <div class="pad snare-pad b5" onclick="melody.ActivePad(event)"></div>
+            <div class="pad snare-pad b6" onclick="melody.ActivePad(event)"></div>
+            <div class="pad snare-pad b7" onclick="melody.ActivePad(event)"></div>
         </div>
     </div>
     <div class="hihat-track">
@@ -70,24 +70,24 @@
             </select>
         </div>
         <div class="hihat">
-            <div class="pad hihat-pad b0"></div>
-            <div class="pad hihat-pad b1"></div>
-            <div class="pad hihat-pad b2"></div>
-            <div class="pad hihat-pad b3"></div>
-            <div class="pad hihat-pad b4"></div>
-            <div class="pad hihat-pad b5"></div>
-            <div class="pad hihat-pad b6"></div>
-            <div class="pad hihat-pad b7"></div>
+            <div class="pad hihat-pad b0" onclick="melody.ActivePad(event)"></div>
+            <div class="pad hihat-pad b1" onclick="melody.ActivePad(event)"></div>
+            <div class="pad hihat-pad b2" onclick="melody.ActivePad(event)"></div>
+            <div class="pad hihat-pad b3" onclick="melody.ActivePad(event)"></div>
+            <div class="pad hihat-pad b4" onclick="melody.ActivePad(event)"></div>
+            <div class="pad hihat-pad b5" onclick="melody.ActivePad(event)"></div>
+            <div class="pad hihat-pad b6" onclick="melody.ActivePad(event)"></div>
+            <div class="pad hihat-pad b7" onclick="melody.ActivePad(event)"></div>
         </div>
     </div>
     <button class="play">Play</button>
     <div class="tempo">
-        <input
-                type="range"
-                class="tempo-slider"
-                max="300"
-                min="20"
-                value="150"
+        <input onchange="melody.getTempoFromSlider(value, event)"
+               type="range"
+               class="tempo-slider"
+               max="300"
+               min="20"
+               value="150"
         />
         <p>Tempo: <span class="tempo-nr">150</span></p>
     </div>

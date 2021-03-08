@@ -60,7 +60,7 @@ svg {
 .snare,
 .hihat {
   display: flex;
-}
+ }
 .controls {
   display: flex;
   justify-content: space-between;
