@@ -1,6 +1,7 @@
 class Melody {
     constructor() {
         this.tempo = 150;
+
     }
 
     playSound(htmlElement) {
@@ -59,7 +60,7 @@ class Melody {
         })
     }
 
-    ActivePad(event) {
+    activePad(event) {
         event.target.classList.toggle('active');
     }
 
@@ -69,6 +70,27 @@ class Melody {
         clearInterval(this.padInterval);
         this.repeat(this.tempo);
     }
+
+    changeSound(event) {
+        //change src in audio element on html
+         if (event.target.name === 'kick-select') {
+            let kickSound = document.querySelector('.kick-sound');
+            kickSound.setAttribute('src', event.target.value);
+            console.log(event.target.name);
+        }
+        if (event.target.name === 'snare-select') {
+            let kickSound = document.querySelector('.snare-sound');
+            kickSound.setAttribute('src', event.target.value);
+            console.log(event.target.name);
+        }
+        if (event.target.name === 'hihat-select') {
+            let kickSound = document.querySelector('.hihat-sound');
+            kickSound.setAttribute('src', event.target.value);
+            console.log(event.target.name);
+        }
+
+    }
+
 
 }
 
