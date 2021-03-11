@@ -12,4 +12,6 @@ const activatePad = (pad)=> {
 }
 pads.forEach(activatePad);
 
+console.log('git training');
+
 
