@@ -5,13 +5,16 @@ const activatePad = (pad)=> {
             pad.classList.toggle('active');
             pad.style.animation = 'animation 0.3s alternate ease-in-out 2';
         })
-        pad.addEventListener('animationend',()=>{
-            pad.style.animation='';
-        })
+        pad.addEventListener('animationend',()=>pad.style.animation='');
     }
 }
 pads.forEach(activatePad);
 
-console.log('git training');
+const zwrocX = (x)=>('ala ma kota');
 
 
+function ala(callback){
+    return callback;
+}
+
+console.log(ala(zwrocX(1)));
